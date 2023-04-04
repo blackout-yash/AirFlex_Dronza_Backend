@@ -32,13 +32,13 @@ app.use(passport.session())
 
 connectPassport()
 
-app.use('/api/v1', userRoute)
+app.use('/api', userRoute)
 
 // Order
 app.use(urlencoded({
     extended: true
 }))
 
-app.use('/api/v1', orderRoute)
+app.use('/api', orderRoute)
 
 app.use(errorMiddleware)
